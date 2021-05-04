@@ -3,7 +3,12 @@ guid: f9fec6fc949f5ca4aab7a92533b2c3da
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TankMat
+    second: {fileID: 2100000, guid: 79eddc0a0bc74954b9df3a5028c9fbcc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -49,7 +54,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-    bakeAxisConversion: 0
+    bakeAxisConversion: 1
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
