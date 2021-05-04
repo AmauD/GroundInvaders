@@ -53,7 +53,9 @@ public class PlayerMove : MonoBehaviour
     {
         var position = _transform.position;
 
-        _transform.position = new Vector3(Mathf.Clamp(position.x, -_limit.Value, _limit.Value), position.y, position.z);
+        position.x = Mathf.Clamp(position.x, -_limit.Value, _limit.Value);
+
+        _transform.position = new Vector3(position.x, position.y, position.z);
     }
 
     private void Move()
