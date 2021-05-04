@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    #region properties
-    #endregion properties
-
-
-
     #region fields
     private float _limitX = 3.5f;
     private Rigidbody _rigidbody;
@@ -16,11 +11,6 @@ public class PlayerMove : MonoBehaviour
     private Transform _transform;
     [SerializeField] [Range(0f, 50f)] private float _speed = 2f;
     #endregion fields
-
-
-
-    #region publics methods
-    #endregion publics methods
 
 
 
@@ -42,7 +32,6 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         UpdateInputMove();
-        Debug.Log(_transform.position);
     }
 
     private void FixedUpdate()
