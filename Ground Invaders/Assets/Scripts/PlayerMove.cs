@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     #region fields
-    private float _limitX = 3.5f;
     private Rigidbody _rigidbody;
-    private Vector3 _movementInput;
     private Transform _transform;
+    private Vector3 _movementInput;
     [SerializeField] [Range(0f, 50f)] private float _speed = 2f;
+    [SerializeField] private FloatVariable _limit;
     #endregion fields
 
 
@@ -26,7 +26,6 @@ public class PlayerMove : MonoBehaviour
         {
             _transform = GetComponent<Transform>();
         }
-
     }
 
     private void Update()
@@ -48,18 +47,13 @@ public class PlayerMove : MonoBehaviour
         var horizontal = Input.GetAxisRaw("Horizontal");
 
         _movementInput = new Vector3(horizontal, 0f, 0f);
-
     }
 
     private void ClampMove()
     {
-        var positionX = _transform.position.x;
+        var position = _transform.position;
 
-        if (positionX > _limitX || positionX < -_limitX)
-        {
-            var newPositionX = Mathf.Clamp(positionX, -_limitX, _limitX);
-            _transform.position = new Vector3(newPositionX, _transform.position.y, _transform.position.z);
-        }
+        _transform.position = new Vector3(Mathf.Clamp(position.x, -_limit.Value, _limit.Value), position.y, position.z);
     }
 
     private void Move()
