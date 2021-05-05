@@ -7,7 +7,6 @@ public class DefenseCollider : MonoBehaviour
     #region fields
     [SerializeField] [Range(0, 10)] private int _health = 4;
     private Transform _transform;
-    private Vector3 _descent;
     private MeshRenderer _meshRenderer;
     private float _currentHealth = 1f;
     #endregion fields
@@ -19,8 +18,6 @@ public class DefenseCollider : MonoBehaviour
     {
         if (_transform == null) {_transform = GetComponent<Transform>();}
         if (_meshRenderer == null) { _meshRenderer = GetComponent<MeshRenderer>();}
-
-        _descent.y = -((_transform.position.y * 2f) / _health);
     }
 
     private void OnCollisionEnter(Collision collision)
