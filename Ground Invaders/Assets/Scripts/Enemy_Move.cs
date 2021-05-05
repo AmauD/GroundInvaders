@@ -18,7 +18,12 @@ public class Enemy_Move : MonoBehaviour
 
 
     #region publics methods
+    public void moveLeftRight()
+    {
+        var moveSpeed = Mathf.Pow ((Mathf.Sqrt (56 - EnemyCounter.count) / (Mathf.Sqrt (Mathf.Pow (56, 2) - Mathf.Pow (EnemyCounter.count, 2)))) * 10, 3) - 0.25f;
 
+        var velocity = moveSpeed * Time.deltaTime;
+    }
     #endregion publics methods
 
 
