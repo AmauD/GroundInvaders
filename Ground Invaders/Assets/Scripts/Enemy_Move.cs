@@ -12,24 +12,54 @@ public class Enemy_Move : MonoBehaviour
 
     #region fields
     private Transform _enemyMove;
+    [SerializeField] private Rigidbody _myRigidbody;
     [SerializeField] private float _speed = 2f;
+    private Vector3 _directionEnemy;
     #endregion fields
 
 
 
     #region publics methods
-    public void moveLeftRight()
+    public void moveForward()
     {
-        var moveSpeed = Mathf.Pow ((Mathf.Sqrt (56 - EnemyCounter.count) / (Mathf.Sqrt (Mathf.Pow (56, 2) - Mathf.Pow (EnemyCounter.count, 2)))) * 10, 3) - 0.25f;
 
-        var velocity = moveSpeed * Time.deltaTime;
+        _enemyMove.Translate(direction * Time.deltaTime * _speed);
+    }
+
+    public void moveLeft()
+    {
+
+        _enemyMove.Translate(direction * Time.deltaTime * _speed);
+    }
+
+    public void moveRight()
+    {
+
+        _enemyMove.Translate(direction * Time.deltaTime * _speed);
     }
     #endregion publics methods
 
 
 
     #region unity messages
-
+    private void Awake() 
+    {
+        if (_enemyMove == null) 
+        {
+        _enemyMove = GetComponent<Transform>();
+        }
+    }
+    
+    private void Update() 
+    {
+        if (_enemyMove.position.x > 3.5f)
+        {
+            moveRight();
+        } else if (_enemyMove.position.x < -3.5f)
+        {
+            moveLeft();
+        }
+    }
     #endregion unity messages
 
 
