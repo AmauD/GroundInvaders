@@ -29,14 +29,14 @@ public class CannonAngle : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            angle.x -= _speed;
+            angle.z -= _speed;
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            angle.x += _speed;
+            angle.z += _speed;
         }
 
-        angle.x = Mathf.Clamp(angle.x, 310f, 359.9f);
+        angle.z = Mathf.Clamp(angle.z, 310f, 359.9f);
 
         _transform.eulerAngles = angle;
     }
