@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class ProjectileMove : MonoBehaviour
 {
-    #region properties
-
-    #endregion properties
-
-
-
     #region fields
     private Transform _transform;
     private Rigidbody _rigidbody;
@@ -19,7 +13,10 @@ public class ProjectileMove : MonoBehaviour
 
 
     #region public methods
-
+    public void SetSpeed(float speed)
+    {
+        _speed = speed;
+    }
     #endregion public methods
 
 
@@ -29,16 +26,6 @@ public class ProjectileMove : MonoBehaviour
     {
         if (_transform == null) {_transform = GetComponent<Transform>();}
         if (_rigidbody == null) {_rigidbody = GetComponent<Rigidbody>();}
-    }
-
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
     }
 
     private void FixedUpdate()
