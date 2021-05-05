@@ -11,7 +11,6 @@ public class Bullet : MonoBehaviour
     #region fields
     private Transform _transform;
     private Rigidbody _rigidBody;
-    [SerializeField] private float _bulletSpeed;
 
     #endregion
 
@@ -31,29 +30,12 @@ public class Bullet : MonoBehaviour
         _rigidBody = gameObject.GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
-    {
-        BulletMove();
-    }
 
     #endregion
 
 
 
     #region privates methods
-
-    private void BulletMove()
-    {
-        Vector3 velocity = _transform.forward * _bulletSpeed;
-        Vector3 movementStep = velocity * Time.fixedDeltaTime;
-        Vector3 newPos = _transform.position + movementStep;
-        _rigidBody.MovePosition(newPos);
-    }
-
-    public void Shoot(float speed)
-    {
-        _bulletSpeed = speed;
-    }
 
     #endregion
 }
