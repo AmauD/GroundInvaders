@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &224060723448128453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458470353528466784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d89e40d7ab7f024d9e63f1627941e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7988663433512918856
 GameObject:
   m_ObjectHideFlags: 0
@@ -23,9 +11,10 @@ GameObject:
   - component: {fileID: 7320249065793439218}
   - component: {fileID: 5924876911838743127}
   - component: {fileID: 8493106517617098397}
-  - component: {fileID: 2472015631480171713}
   - component: {fileID: 6884724381749630670}
   - component: {fileID: 370325371569111492}
+  - component: {fileID: 2472015631480171713}
+  - component: {fileID: 1828544384687433866}
   m_Layer: 3
   m_Name: Tank
   m_TagString: Untagged
@@ -97,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2472015631480171713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988663433512918856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5571d0b4b676f4b4e8d91fd570f5d9f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 10
-  _limit: {fileID: 11400000, guid: eb174e34d8dc26a40be40c918a7e196d, type: 2}
 --- !u!54 &6884724381749630670
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -140,6 +115,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4136231, y: 0.1866303, z: 0.5593344}
   m_Center: {x: 0, y: 0.09331515, z: 0}
+--- !u!114 &2472015631480171713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988663433512918856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5571d0b4b676f4b4e8d91fd570f5d9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 10
+  _limit: {fileID: 11400000, guid: eb174e34d8dc26a40be40c918a7e196d, type: 2}
+--- !u!114 &1828544384687433866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988663433512918856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a52d61b31625f469b84056967c3e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3377510687019995185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,11 +202,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9fec6fc949f5ca4aab7a92533b2c3da, type: 3}
---- !u!1 &2458470353528466784 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f9fec6fc949f5ca4aab7a92533b2c3da, type: 3}
-  m_PrefabInstance: {fileID: 3377510687019995185}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2978547786524719066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f9fec6fc949f5ca4aab7a92533b2c3da, type: 3}
