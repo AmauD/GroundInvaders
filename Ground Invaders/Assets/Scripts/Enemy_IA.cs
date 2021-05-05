@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Move : MonoBehaviour
+public class Enemy_IA : MonoBehaviour
 {
     #region properties
 
@@ -11,8 +11,7 @@ public class Enemy_Move : MonoBehaviour
 
 
     #region fields
-    private Transform _enemyMove;
-    [SerializeField] private float _speed = 2f;
+
     #endregion fields
 
 
