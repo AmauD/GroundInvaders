@@ -5,30 +5,31 @@ using UnityEngine;
 public class Enemy_Move : MonoBehaviour
 {
     #region properties
-    
-    #endregion
+
+    #endregion properties
 
 
 
     #region fields
-
-    #endregion
+    private Transform _enemyMove;
+    [SerializeField] private float _speed = 0f;
+    #endregion fields
 
 
 
     #region publics methods
 
-    #endregion
+    #endregion publics methods
 
 
 
-    #rengion unity messages
+    #region unity messages
 
-    #endregion
+    #endregion unity messages
 
 
 
-    #rengion privates methods
+    #region privates methods
 
-    #endregion
+    #endregion privates methods
 }
