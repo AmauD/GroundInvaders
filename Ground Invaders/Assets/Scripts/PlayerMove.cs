@@ -38,21 +38,21 @@ public class PlayerMove : MonoBehaviour
     #region privates methods
     private void UpdateInputMove()
     {
-        var horizontal = Input.GetAxisRaw("Horizontal");
+        float horizontal = Input.GetAxisRaw("Horizontal");
 
         _movementInput = new Vector3(horizontal, 0f, 0f);
     }
 
     private void Move()
     {
-        var Velocity = _movementInput * _speed;
+        Vector3 Velocity = _movementInput * _speed;
 
         _rigidbody.velocity = Velocity;
     }
 
     private void ClampMove()
     {
-        var position = _transform.position;
+        Vector3 position = _transform.position;
 
         position.x = Mathf.Clamp(position.x, -_limit.Value, _limit.Value);
 

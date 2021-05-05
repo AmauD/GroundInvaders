@@ -39,8 +39,8 @@ public class ProjectileMove : MonoBehaviour
     #region private methods
     private void Move()
     {
-        var velocity = _transform.forward * _speed;
-        var newPosition = _transform.position + velocity;
+        Vector3 velocity = _transform.forward * _speed;
+        Vector3 newPosition = _transform.position + velocity;
 
         _rigidbody.MovePosition(newPosition);
     }
