@@ -29,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        ClampMove();
     }
     #endregion unity messages
 
@@ -47,8 +48,6 @@ public class PlayerMove : MonoBehaviour
         var Velocity = _movementInput * _speed;
 
         _rigidbody.velocity = Velocity;
-
-        ClampMove();
     }
 
     private void ClampMove()
