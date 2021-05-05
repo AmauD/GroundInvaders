@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Move : MonoBehaviour
 {
     #region properties
-    
+
     #endregion
 
 
@@ -22,13 +22,13 @@ public class Enemy_Move : MonoBehaviour
 
 
 
-    #rengion unity messages
+    #region unity messages
 
     #endregion
 
 
 
-    #rengion privates methods
+    #region privates methods
 
     #endregion
 }
