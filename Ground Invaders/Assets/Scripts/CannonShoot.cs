@@ -8,6 +8,7 @@ public class CannonShoot : MonoBehaviour
     private Transform _cannonTransform;
     [SerializeField] private Vector3 _bulletForce = Vector3.zero;
     [SerializeField] Transform _extremityCannon;
+    private CannonAngle _cannonRotation;
 
     #endregion
 
@@ -24,6 +25,7 @@ public class CannonShoot : MonoBehaviour
     private void Awake()
     {
         _cannonTransform = gameObject.GetComponent<Transform>();
+        _cannonRotation = gameObject.GetComponent<CannonAngle>();
     }
 
     private void Update()
@@ -41,6 +43,8 @@ public class CannonShoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            var yForce = _cannonRotation.GetCannonRotation() * 5f;
+            _bulletForce.y = yForce;
             var bullet = Instantiate(_bulletPrefab, _extremityCannon.position, _cannonTransform.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(_bulletForce, ForceMode.Impulse);
         }
