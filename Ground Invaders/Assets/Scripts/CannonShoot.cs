@@ -9,6 +9,7 @@ public class CannonShoot : MonoBehaviour
     [SerializeField] private Vector3 _bulletForce = Vector3.zero;
     [SerializeField] Transform _extremityCannon;
     private CannonAngle _cannonRotation;
+    [SerializeField] AudioSource _audioSource;
 
     #endregion
 
@@ -26,6 +27,7 @@ public class CannonShoot : MonoBehaviour
     {
         _cannonTransform = gameObject.GetComponent<Transform>();
         _cannonRotation = gameObject.GetComponent<CannonAngle>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -47,6 +49,7 @@ public class CannonShoot : MonoBehaviour
             _bulletForce.y = yForce;
             var bullet = Instantiate(_bulletPrefab, _extremityCannon.position, _cannonTransform.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(_bulletForce, ForceMode.Impulse);
+            _audioSource.Play();
         }
     }
 
