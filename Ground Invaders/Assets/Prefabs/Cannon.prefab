@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0021a658f8e789643b52b6409789a59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 5428294661412076343, guid: 2e7b3b02adf12414b818024962b42c34, type: 3}
+  _bulletPrefab: {fileID: 809264590691915509, guid: 2e7b3b02adf12414b818024962b42c34, type: 3}
   _bulletForce: {x: 0, y: 0, z: 25}
   _extremityCannon: {fileID: 8554097575091919865}
   _audioSource: {fileID: -5344087154149257685}
@@ -216,13 +216,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8554097575923898339}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1940410749626309070}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8554097575923898342
 MeshFilter:
   m_ObjectHideFlags: 0

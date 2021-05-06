@@ -10,7 +10,6 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private FloatVariable _limitPosition;
     [SerializeField] private float _speed = 0.2f;
     [SerializeField] private float _time = 1f;
-    [SerializeField] private Transform _enemyTransform;
     [SerializeField] private IntVariable _enemyRemain;
     private List<Transform> _enemiesTransform;
     #endregion fields
@@ -34,6 +33,7 @@ public class EnemyManager : MonoBehaviour
     {
         for (int i = 0; i < _transform.childCount; i++)
         {
+            if (_enemiesTransform[i] == null) continue;
             if (_enemiesTransform[i].position.x > _limitPosition.Value)
             {
                 SetDirectionLeft();
@@ -49,7 +49,7 @@ public class EnemyManager : MonoBehaviour
 
     private void Move(Vector3 direction)
     {
-        _transform.Translate(direction * Time.deltaTime * _speed);
+        _transform.Translate(direction * Time.deltaTime * (_speed / (_enemyRemain.Value + 1)));
     }
 
     private void SetDirectionLeft()

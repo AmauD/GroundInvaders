@@ -94,7 +94,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &4589678149879299751
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5571d0b4b676f4b4e8d91fd570f5d9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
+  _speed: 2
   _limit: {fileID: 11400000, guid: eb174e34d8dc26a40be40c918a7e196d, type: 2}
 --- !u!114 &1828544384687433866
 MonoBehaviour:
@@ -302,27 +302,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2698120679491868223, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
+      propertyPath: _bulletForce.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698120679491868223, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
+      propertyPath: _bulletForce.z
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2939573928676375178, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
       propertyPath: m_Name
       value: Cannon
       objectReference: {fileID: 0}
-    - target: {fileID: 4241267299801197208, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
-      propertyPath: _cannonRotation
-      value: 0
+    - target: {fileID: 8554097575091919865, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2758
       objectReference: {fileID: 0}
-    - target: {fileID: 8554097575923898341, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
+    - target: {fileID: 8554097575091919865, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0003
       objectReference: {fileID: 0}
-    - target: {fileID: 8554097575923898341, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8554097575923898341, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8554097575923898336, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1aab9b6c9e43f047918a3ad0f881323, type: 3}
 --- !u!4 &1201641422969405821 stripped
 Transform:
