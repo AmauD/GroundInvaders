@@ -174,7 +174,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 15
+  field of view: 6
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -199,13 +199,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161471719}
-  m_LocalRotation: {x: 0.24208267, y: -0, z: -0, w: 0.9702557}
-  m_LocalPosition: {x: 0, y: 8.68, z: -13.27}
+  m_LocalRotation: {x: 0.22365531, y: 0.37130076, z: -0.09264106, w: 0.8963994}
+  m_LocalPosition: {x: -31.35, y: 23.65, z: -27.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 28.019, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 28.019, y: 45, z: 0}
 --- !u!1 &429248425
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpeed: 0.1
-  _maxDelay: 2
+  _maxDelay: 5
   _shooterTransform: {fileID: 1892347670}
   _projectilePrefab: {fileID: 6679051165123853965, guid: 095723c91d2ddf046a652e26cc13c0b8, type: 3}
 --- !u!1 &1892347669
@@ -593,6 +593,10 @@ PrefabInstance:
     - target: {fileID: 2978547786524719066, guid: f339a4469d34d3846b1ec589d7ca7359, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400509897984462476, guid: f339a4469d34d3846b1ec589d7ca7359, type: 3}
+      propertyPath: _bulletForce.z
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6884724381749630670, guid: f339a4469d34d3846b1ec589d7ca7359, type: 3}
       propertyPath: m_Constraints
