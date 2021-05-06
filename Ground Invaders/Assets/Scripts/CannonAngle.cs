@@ -36,13 +36,13 @@ public class CannonAngle : MonoBehaviour
 
     private void OrientationCannon()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            _cannonRotation += 0.002f;
+            _cannonRotation += 0.1f;
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            _cannonRotation -= 0.002f;
+            _cannonRotation -= 0.1f;
         }
         _cannonRotation = Mathf.Clamp(_cannonRotation, 0.0f, 1.0f);
         _transform.rotation = Quaternion.Slerp(_minimumCannonRotation, _maximumCannonRotation, _cannonRotation);
