@@ -10,7 +10,6 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private FloatVariable _limitPosition;
     [SerializeField] private float _speed = 0.2f;
     [SerializeField] private float _time = 1f;
-    [SerializeField] private Transform _enemyTransform;
     [SerializeField] private IntVariable _enemyRemain;
     private List<Transform> _enemiesTransform;
     #endregion fields
@@ -55,15 +54,15 @@ public class EnemyManager : MonoBehaviour
     private void SetDirectionLeft()
     {
         _direction = Vector3.forward;
-        StartCoroutine("Delay", Vector3.left);
-        _transform.Translate(new Vector3(-0.01f, 0 , 0));
+        StartCoroutine("Delay", Vector3.right);
+        _transform.Translate(new Vector3(0.01f, 0 , 0));
     }
 
     private void SetDirectionRight()
     {
         _direction= Vector3.forward;
-        StartCoroutine("Delay", Vector3.right);
-        _transform.Translate(new Vector3(0.01f, 0 , 0));
+        StartCoroutine("Delay", Vector3.left);
+        _transform.Translate(new Vector3(-0.01f, 0 , 0));
     }
 
     IEnumerator Delay(Vector3 direction)

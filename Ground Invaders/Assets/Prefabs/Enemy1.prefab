@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6670743218208543825}
   - component: {fileID: 4092310398161131612}
   - component: {fileID: 7718797002202616790}
+  - component: {fileID: 1612271897350789417}
   m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
@@ -35,6 +36,7 @@ Transform:
   - {fileID: 2223949647402050736}
   - {fileID: 3570448461433119079}
   - {fileID: 5651512533530634542}
+  - {fileID: 223265366189180791}
   m_Father: {fileID: 7465708353921778117}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,6 +137,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &1612271897350789417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484055037026238557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa5901c5783bd34aab84b84396439f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletSpeed: 0.05
+  _maxDelay: 8
+  _shooterTransform: {fileID: 223265366189180791}
+  _projectilePrefab: {fileID: 6679051165123853965, guid: 095723c91d2ddf046a652e26cc13c0b8, type: 3}
+--- !u!1 &6775551139142236999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223265366189180791}
+  m_Layer: 6
+  m_Name: Shooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223265366189180791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775551139142236999}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.186}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1601939462992929239}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7840862187766471551
 GameObject:
   m_ObjectHideFlags: 0
