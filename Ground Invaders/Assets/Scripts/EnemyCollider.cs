@@ -6,6 +6,7 @@ public class EnemyCollider : MonoBehaviour
 {
     #region fields
     [SerializeField] private IntVariable _enemyRemain;
+    [SerializeField] private GameObject _parent;
     #endregion fields
 
 
@@ -13,7 +14,7 @@ public class EnemyCollider : MonoBehaviour
     #region unity messages
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        Destroy(_parent);
     }
 
     private void OnDestroy() 
