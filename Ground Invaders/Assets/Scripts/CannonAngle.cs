@@ -52,22 +52,3 @@ public class CannonAngle : MonoBehaviour
 
 
 }
-
-
-// private void OrientationCannon()
-//     {
-//         Vector3 angle = _transform.eulerAngles;
-
-//         if (Input.GetKeyDown(KeyCode.DownArrow))
-//         {
-//             angle.z -= _speed;
-//         }
-//         if (Input.GetKeyDown(KeyCode.UpArrow))
-//         {
-//             angle.z += _speed;
-//         }
-
-//         angle.z = Mathf.Clamp(angle.z, 310f, 359.9f);
-
-//         _transform.eulerAngles = angle;
-//     }
