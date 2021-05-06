@@ -46,6 +46,8 @@ public class EnemyShooter : MonoBehaviour
         var newProjectile = Instantiate(_projectilePrefab, _shooterTransform.position, _shooterTransform.rotation);
 
         newProjectile.GetComponent<ProjectileMove>().SetSpeed(_bulletSpeed);
+
+        Destroy(newProjectile, 5f);
     }
     #endregion private methods
 }
