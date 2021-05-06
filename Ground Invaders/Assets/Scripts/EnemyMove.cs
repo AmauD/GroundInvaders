@@ -22,18 +22,16 @@ public class EnemyMove : MonoBehaviour
 
     private void Update()
     {
-        SetDirectionLeft();
-        SetDirectionRight();
-        Move(_direction);
+        
     }
     #endregion unity messages
 
-    private void Move(Vector3 direction)
+    public void Move(Vector3 direction)
     {
         _transform.Translate(direction * Time.deltaTime * _speed);
     }
 
-    private void SetDirectionLeft()
+    public void SetDirectionLeft()
     {
     if (_transform.position.x > _limitPosition.Value)
         {
@@ -43,7 +41,7 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    private void SetDirectionRight()
+    public void SetDirectionRight()
     {
     if (_transform.position.x < -_limitPosition.Value)
         {
