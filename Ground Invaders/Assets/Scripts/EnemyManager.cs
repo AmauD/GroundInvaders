@@ -49,7 +49,7 @@ public class EnemyManager : MonoBehaviour
 
     private void Move(Vector3 direction)
     {
-        _transform.Translate(direction * Time.deltaTime * _speed);
+        _transform.Translate(direction * Time.deltaTime * (_speed / _enemyRemain.Value));
     }
 
     private void SetDirectionLeft()
