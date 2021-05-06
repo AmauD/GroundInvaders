@@ -26,14 +26,19 @@ public class EnemyManager : MonoBehaviour
             _enemiesTransform.Add(_transform.GetChild(i));
         }
         _enemyRemain.Value = _enemiesTransform.Count;
+
         Debug.Log(_enemyRemain.Value);
     }
 
     private void Update()
     {
-        for (int i = 0; i < _transform.childCount; i++)
+        for (int i = 0; i < _enemiesTransform.Count; i++)
         {
-            if (_enemiesTransform[i] == null) continue;
+            if (_enemiesTransform[i] == null)
+            {
+                _enemiesTransform.RemoveAt(i);
+            }
+
             if (_enemiesTransform[i].position.x > _limitPosition.Value)
             {
                 SetDirectionLeft();
@@ -41,9 +46,15 @@ public class EnemyManager : MonoBehaviour
             if (_enemiesTransform[i].position.x < -_limitPosition.Value)
             {
                 SetDirectionRight();
-            } 
+            }
         }
+
         Move(_direction);
+
+        foreach(Transform element in _enemiesTransform)
+        {
+            Debug.Log(element);
+        }
     }
     #endregion unity messages
 
@@ -55,15 +66,15 @@ public class EnemyManager : MonoBehaviour
     private void SetDirectionLeft()
     {
         _direction = Vector3.forward;
-        StartCoroutine("Delay", Vector3.left);
-        _transform.Translate(new Vector3(-0.01f, 0 , 0));
+        StartCoroutine("Delay", Vector3.right);
+        _transform.Translate(new Vector3(0.01f, 0 , 0));
     }
 
     private void SetDirectionRight()
     {
         _direction= Vector3.forward;
-        StartCoroutine("Delay", Vector3.right);
-        _transform.Translate(new Vector3(0.01f, 0 , 0));
+        StartCoroutine("Delay", Vector3.left);
+        _transform.Translate(new Vector3(-0.01f, 0 , 0));
     }
 
     IEnumerator Delay(Vector3 direction)
