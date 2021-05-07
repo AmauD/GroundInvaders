@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1208608830775462831}
   - component: {fileID: 1331263895381252519}
   - component: {fileID: 3245969058545505616}
-  - component: {fileID: 436649220784500143}
+  - component: {fileID: 2459040896180483856}
   m_Layer: 8
   m_Name: EnemyProjectile
   m_TagString: Untagged
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03ecfd112bb18841980ecf530fdd3f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &436649220784500143
+--- !u!114 &2459040896180483856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,6 +136,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6679051165123853965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25247a26448ce5743a24bcadf7b929bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 4745893e0ddedd94eb190bc063ce71e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

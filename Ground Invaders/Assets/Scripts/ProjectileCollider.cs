@@ -6,6 +6,8 @@ public class ProjectileCollider : MonoBehaviour
 {
     #region fields
     private CannonShoot _cannon;
+    private Transform _transform;
+    [SerializeField] GameObject _bulletExplosionPrefab;
 
     #endregion
 
@@ -15,16 +17,20 @@ public class ProjectileCollider : MonoBehaviour
     {
         _cannon = cannon;
     }
-
     #endregion
 
 
 
     #region unity messages
+    private void Awake()
+    {
+        _transform = GetComponent<Transform>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Destroy");
+        var newExplosion = Instantiate(_bulletExplosionPrefab, _transform.position, _transform.rotation);
         Destroy(gameObject);
+        Destroy(newExplosion, 1f);
     }
 
     private void OnDestroy()
