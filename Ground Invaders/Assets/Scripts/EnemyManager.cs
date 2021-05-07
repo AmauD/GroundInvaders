@@ -26,17 +26,18 @@ public class EnemyManager : MonoBehaviour
             _enemiesTransform.Add(_transform.GetChild(i));
         }
         _enemyRemain.Value = _enemiesTransform.Count;
-
-        Debug.Log(_enemyRemain.Value);
     }
 
     private void Update()
     {
+        if (_enemiesTransform.Count <= 0) return;
+
         for (int i = 0; i < _enemiesTransform.Count; i++)
         {
             if (_enemiesTransform[i] == null)
             {
                 _enemiesTransform.RemoveAt(i);
+                continue;
             }
 
             if (_enemiesTransform[i].position.x > _limitPosition.Value)
@@ -50,11 +51,6 @@ public class EnemyManager : MonoBehaviour
         }
 
         Move(_direction);
-
-        foreach(Transform element in _enemiesTransform)
-        {
-            Debug.Log(element);
-        }
     }
     #endregion unity messages
 
