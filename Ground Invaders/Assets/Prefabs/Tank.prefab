@@ -145,6 +145,7 @@ MonoBehaviour:
   _audioClip: {fileID: 8300000, guid: 04fb4b49a0819824591f33051efdbf4d, type: 3}
   _audioManager: {fileID: 0}
   _playerIsAlive: {fileID: 11400000, guid: 2eb9822226192914fa1760e49d7e58a4, type: 2}
+  _tankDestroyedPrefab: {fileID: 4575159297983281767, guid: 6a196611d993816438773c61e70c5003, type: 3}
 --- !u!1001 &738783621991618739
 PrefabInstance:
   m_ObjectHideFlags: 0
