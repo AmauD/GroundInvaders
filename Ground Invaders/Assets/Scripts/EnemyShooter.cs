@@ -23,7 +23,7 @@ public class EnemyShooter : MonoBehaviour
     {
         if (_audioSource == null) {_audioSource = GetComponent<AudioSource>();}
         _randomDelay = Random.Range(0.5f, _maxDelay);
-        _nextShootTime = Random.Range(2f, 10f);
+        _nextShootTime = Time.time + Random.Range(2f, 10f);
     }
 
     private void Update()
