@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemyShooter : MonoBehaviour
 {
     #region fields
-    private float _nextShootTime;
+    private float _nextShootTime = 5f;
     private float _randomDelay;
     [SerializeField] [Range(0.01f, 1f)] private float _bulletSpeed = 0.1f;
-    [SerializeField] [Range(0.5f, 10f)] private float _maxDelay = 2f;
+    [SerializeField] [Range(0.5f, 10f)] private float _maxDelay = 10f;
     [SerializeField] private Transform _shooterTransform;
     [SerializeField] private GameObject _projectilePrefab;
     #endregion fields
