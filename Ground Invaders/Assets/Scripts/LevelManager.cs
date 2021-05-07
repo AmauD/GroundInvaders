@@ -13,6 +13,19 @@ public class LevelManager : MonoBehaviour
 
 
 
+    #region public methods
+    public void Lose()
+    {
+        if (!_playerIsAlive.Value && !_levelEnd)
+        {
+            _levelEnd = true;
+            StartCoroutine("Restart");
+        }
+    }
+    #endregion public methods
+
+
+
     #region unity messages
     private void Awake()
     {
@@ -29,7 +42,6 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
 
-        Debug.Log("Must restart");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     #endregion unity messages
@@ -42,17 +54,6 @@ public class LevelManager : MonoBehaviour
         if(_EnemyRemain.Value <= 0 && !_levelEnd)
         {
             _levelEnd = true;
-            Debug.Log("Win");
-            StartCoroutine("Restart");
-        }
-    }
-
-    private void Lose()
-    {
-        if(!_playerIsAlive.Value && !_levelEnd)
-        {
-            _levelEnd = true;
-            Debug.Log("Lose");
             StartCoroutine("Restart");
         }
     }
