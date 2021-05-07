@@ -37,5 +37,6 @@ public class ProjectileCollider : MonoBehaviour
     {
         _cannon.CanShoot = true;
     }
+
     #endregion unity messages
 }

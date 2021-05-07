@@ -142,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a52d61b31625f469b84056967c3e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 04fb4b49a0819824591f33051efdbf4d, type: 3}
+  _audioManager: {fileID: 0}
 --- !u!1001 &738783621991618739
 PrefabInstance:
   m_ObjectHideFlags: 0
