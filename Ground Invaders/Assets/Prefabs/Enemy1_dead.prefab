@@ -30,6 +30,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1660105343392433333, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
+--- !u!114 &6723211731344629424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448934475534503659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed688f2db81e1044a1e6a4fca15da01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1805702319660758412
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -60,6 +72,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1660105343392433333, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
+--- !u!114 &1679614138883861939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555675668680900106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed688f2db81e1044a1e6a4fca15da01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4065773444510093632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4936,6 +4960,7 @@ GameObject:
   - component: {fileID: 6670743218208543825}
   - component: {fileID: 4092310398161131612}
   - component: {fileID: 7718797002202616790}
+  - component: {fileID: 4962088449913624636}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -4984,7 +5009,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cd21747b272ae5d40b923e28a22fc4da, type: 2}
+  - {fileID: 2100000, guid: 66b7759a85c305346a957da75fa4d3af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5054,6 +5079,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4962088449913624636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484055037026238557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed688f2db81e1044a1e6a4fca15da01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7840862187766471551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5119,6 +5156,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1660105343392433333, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
+--- !u!114 &2361022298250316477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8319813527243182468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed688f2db81e1044a1e6a4fca15da01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &791373867781469114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5170,6 +5219,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 66b7759a85c305346a957da75fa4d3af, type: 2}
     - target: {fileID: 919132149155446097, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
       propertyPath: m_Name
       value: PlateA (1)
@@ -5241,6 +5294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 66b7759a85c305346a957da75fa4d3af, type: 2}
     - target: {fileID: 919132149155446097, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
       propertyPath: m_Name
       value: PlateA
@@ -5312,6 +5369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 240
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 66b7759a85c305346a957da75fa4d3af, type: 2}
     - target: {fileID: 919132149155446097, guid: 4c06292bf8cb0024c83c55d409a1aa8b, type: 3}
       propertyPath: m_Name
       value: PlateA (2)

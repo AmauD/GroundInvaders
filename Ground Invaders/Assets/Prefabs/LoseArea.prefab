@@ -75,3 +75,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelManager: {fileID: 0}
+  _playerIsAlive: {fileID: 11400000, guid: 2eb9822226192914fa1760e49d7e58a4, type: 2}
