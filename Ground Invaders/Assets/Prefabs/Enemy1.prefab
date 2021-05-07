@@ -152,6 +152,7 @@ MonoBehaviour:
   _enemyRemain: {fileID: 11400000, guid: 02e44574c9120804698ffd850a044505, type: 2}
   _parent: {fileID: 7840862187766471551}
   _enemyDeadPrefab: {fileID: 7840862187766471551, guid: 3fc75bf5e32348248bbd4b098642a912, type: 3}
+  _myScore: {fileID: 11400000, guid: 2701dd52fbc092c4282d5daf4ec3ed4e, type: 2}
 --- !u!1 &7840862187766471551
 GameObject:
   m_ObjectHideFlags: 0
