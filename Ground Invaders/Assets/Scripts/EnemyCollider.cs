@@ -9,6 +9,7 @@ public class EnemyCollider : MonoBehaviour
     [SerializeField] private IntVariable _enemyRemain;
     [SerializeField] private GameObject _parent;
     [SerializeField] private GameObject _enemyDeadPrefab;
+    [SerializeField] private IntVariable _myScore;
     #endregion fields
 
 
@@ -17,6 +18,7 @@ public class EnemyCollider : MonoBehaviour
     private void Awake()
     {
         if (_transform == null) { _transform = GetComponent<Transform>(); }
+        if (_myScore.Value != 0) { _myScore.Value = 0; }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -29,6 +31,8 @@ public class EnemyCollider : MonoBehaviour
     private void OnDestroy() 
     {
         _enemyRemain.Value -= 1;
+        _myScore.Value += 10;
+        Debug.Log(_myScore.Value);
     }
     #endregion unity messages
 }
