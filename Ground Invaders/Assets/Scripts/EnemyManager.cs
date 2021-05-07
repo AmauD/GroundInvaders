@@ -26,6 +26,8 @@ public class EnemyManager : MonoBehaviour
             _enemiesTransform.Add(_transform.GetChild(i));
         }
         _enemyRemain.Value = _enemiesTransform.Count;
+
+        Debug.Log(_enemyRemain.Value);
     }
 
     private void Update()

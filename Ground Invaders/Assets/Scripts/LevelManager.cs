@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class LevelManager : MonoBehaviour
 
 
     #region unity messages
+    private void Awake()
+    {
+        _playerIsAlive.Value = true;
+    }
+
     private void Update()
     {
         Lose();
@@ -24,6 +30,7 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         Debug.Log("Must restart");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     #endregion unity messages
 
@@ -42,7 +49,7 @@ public class LevelManager : MonoBehaviour
 
     private void Lose()
     {
-        if(_playerIsAlive.Value && !_levelEnd)
+        if(!_playerIsAlive.Value && !_levelEnd)
         {
             _levelEnd = true;
             Debug.Log("Lose");
