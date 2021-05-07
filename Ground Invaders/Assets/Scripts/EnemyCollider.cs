@@ -22,15 +22,13 @@ public class EnemyCollider : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(_parent);
+        var newEnemyDead = Instantiate(_enemyDeadPrefab, _transform.position, _transform.rotation);
+        Destroy(newEnemyDead, 10f);
     }
 
     private void OnDestroy() 
     {
         _enemyRemain.Value -= 1;
-
-        var newEnemyDead = Instantiate(_enemyDeadPrefab, _transform.position, _transform.rotation);
-
-        Destroy(newEnemyDead, 10f);
     }
     #endregion unity messages
 }

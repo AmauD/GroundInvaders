@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpeed: 0.05
-  _maxDelay: 8
+  _maxDelay: 0.75
   _shooterTransform: {fileID: 2738463794581802376}
   _projectilePrefab: {fileID: 6679051165123853965, guid: 095723c91d2ddf046a652e26cc13c0b8, type: 3}
   _audioClipArray:
